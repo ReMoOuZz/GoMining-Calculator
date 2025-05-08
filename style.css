@@ -36,14 +36,22 @@ html, body {
     font-size: 10px;
 }
 
-h6 {
-    background-color: #7540ef;
-    border: 3px solid  #7540ef;
+.coin-title {
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
     font-size: 13px;
     font-weight: 200;
+}
+
+.BTC {
+    background-color: #F7931A;
+    border: 3px solid #F7931A;
+}
+
+.GMT {
+    background-color: #7540ef;
+    border: 3px solid  #7540ef;
 }
 
 .center-content {
@@ -102,7 +110,6 @@ select {
     padding: 5px;
     border: none;
     border-radius: 5px;
-
 }
 
 select:focus {
@@ -141,7 +148,6 @@ select:focus {
 .calculator-container {
    display: flex;
    padding: 20px;
-  
 }
 
 .calculator-options {
@@ -197,7 +203,7 @@ p {
     position:absolute;
     cursor: pointer;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #ccc;
+    background-color: #F7931A;
     transition: .4s;
     border-radius: 34px;
 }
@@ -215,7 +221,7 @@ p {
 }
 
 input:checked + .slider {
-    background-color: #4f46e5;
+    background-color: #7540ef ;
 }
 
 input:checked + .slider::before {
@@ -238,12 +244,12 @@ input:checked + .slider::before {
     
 }
 
-  .gmt-icon {
+.gmt-icon {
     width: 200px;
     margin-left: 70px;
-  }
+}
 
-  .btc-icon {
+.btc-icon {
     width: 250px;
     margin-right: 70px;
-  }
+}
