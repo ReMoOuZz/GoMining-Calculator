@@ -52,11 +52,17 @@ h6 {
     font-weight: 900;
 }
 
+h1 {
+    font-size: 50px;
+    margin: 20px;
+    text-align: center;
+}
+
 .right-content {
     display: flex;
     flex: 1;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin: 10px 20px;
 }
