@@ -17,11 +17,11 @@
         <div class="left-content">
           <div class="btc-content">
             <h6>Bitcoin</h6>
-            <p class="price" id="btc-price">Loading</p>
+            <p class="price" id="btc-price">Chargement</p>
           </div>
           <div class="gmt-content">
             <h6>GoMining</h6>
-            <p class="price" id="gmt-price">Loading</p>
+            <p class="price" id="gmt-price">Chargement</p>
           </div>
         </div>
         <div class="center-content">
@@ -38,6 +38,39 @@
             </select>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="gmt-left-content">
+        <img class="gmt-icon" src="/images/logo1.png" alt="GMT icon" />
+      </div>
+      <div class="calculator">
+        <div class="calculator-container">
+          <div class="calculator-options">
+            <label for="Prix du BTC">Prix du Bitcoin :</label>
+            <input type="text" name="BTC-price" id="btc-price" placeholder="Ex : 95000" />
+            <label for="Prix du GMT">Prix du GMT :</label>
+            <input type="text" name="GMT price" id="GMT" placeholder="Ex : 0.42" />
+            <label for="TH power">Puissance en TH :</label>
+            <input type="text" name="TH power " id="th-power" placeholder="Ex : 100" />
+            <label for="efficiency">Consomation électrique :</label>
+            <input type="text" name="efficiency" id="efficiency" placeholder="Ex : 20" />
+            <label for="discount">Pourcentage de remise :</label>
+            <input type="text" name="discount" id="discount" placeholder="Ex : 20" />
+          </div>
+        </div>
+        <p>Choix de l'entretien</p>
+        <div class="switch-container">
+          <span class="label">BTC</span>
+          <label class="switch">
+            <input type="checkbox" id="mode-toggle" />
+            <span class="slider"></span>
+          </label>
+          <span class="label">GMT</span>
+        </div>
+      </div>
+      <div class="btc-right-content">
+        <img class="btc-icon" src="./images/logo2.png" alt="BTC icon" />
       </div>
     </div>
     <script src="./main.js"></script>
