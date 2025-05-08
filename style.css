@@ -1,0 +1,106 @@
+html, body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    height: 92%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color:#34343a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin: 10px 20px;
+}
+
+.btc-content,
+.gmt-content {
+    line-height: 5px;
+}
+
+.price {
+    font-size: 10px;
+}
+
+h6 {
+    background-color: #7540ef;
+    border: 3px solid  #7540ef;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.center-content {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.right-content {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.connexion {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    background-color: #7540ef;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button:hover {
+    background-color: #70a837;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.1);
+    transition: transform 0.2s ease; 
+    }
+      
+button:active {
+    background-color: #7540ef;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+select {
+    font-family: "Inter", sans-serif;
+    background-color: #7540ef;
+    color: white;
+    font-weight: 200;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+select:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.fa-earth-europe {
+    color: #2b7a78;
+    font-size: 1.2rem;
+    margin-right: 5px;
+  }

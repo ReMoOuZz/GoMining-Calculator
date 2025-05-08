@@ -6,8 +6,40 @@
     <title>GoMining Calculator</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./images/gmt-con.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap");
+    </style>
   </head>
   <body>
+    <div class="header">
+      <div class="container">
+        <div class="left-content">
+          <div class="btc-content">
+            <h6>Bitcoin</h6>
+            <p class="price" id="btc-price">Loading</p>
+          </div>
+          <div class="gmt-content">
+            <h6>GoMining</h6>
+            <p class="price" id="gmt-price">Loading</p>
+          </div>
+        </div>
+        <div class="center-content">
+          <p class="title">GoMining Calculator</p>
+        </div>
+        <div class="right-content">
+          <button class="connexion">Connexion</button>
+          <div class="language-switcher">
+            <i class="fa-solid fa-earth-europe"></i>
+            <label for="language"></label>
+            <select id="language" onchange="changeLanguage(this.value)">
+              <option value="fr">Français</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>
