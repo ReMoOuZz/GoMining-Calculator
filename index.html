@@ -17,11 +17,11 @@
         <div class="left-content">
           <div class="btc-content">
             <h6 class="coin-title BTC">Bitcoin</h6>
-            <p class="price" id="btc-price">Chargement</p>
+            <p class="price" id="btc-value">Chargement</p>
           </div>
           <div class="gmt-content">
             <h6 class="coin-title GMT">GoMining</h6>
-            <p class="price" id="gmt-price">Chargement</p>
+            <p class="price" id="gmt-value">Chargement</p>
           </div>
         </div>
         <div class="center-content">
@@ -50,9 +50,9 @@
             <label for="Prix du BTC">Prix du Bitcoin :</label>
             <input type="text" name="BTC-price" id="btc-price" placeholder="Ex : 95000" />
             <label for="Prix du GMT">Prix du GMT :</label>
-            <input type="text" name="GMT price" id="GMT" placeholder="Ex : 0.42" />
+            <input type="text" name="GMT-price" id="gmt-price" placeholder="Ex : 0.42" />
             <label for="TH power">Puissance en TH :</label>
-            <input type="text" name="TH power " id="th-power" placeholder="Ex : 100" />
+            <input type="text" name="TH-power " id="th-power" placeholder="Ex : 100" />
             <label for="efficiency">Consomation électrique :</label>
             <input type="text" name="efficiency" id="efficiency" placeholder="Ex : 20" />
             <label for="discount">Pourcentage de remise :</label>
@@ -67,6 +67,27 @@
             <span class="slider"></span>
           </label>
           <span class="label">GMT</span>
+        </div>
+        <label for="period"></label>
+        <select id="period">
+          <option value="daily">Quotidien</option>
+          <option value="monthly">Mensuel</option>
+          <option value="yearly">Annuel</option>
+        </select>
+        <h4>Résultats :</h4>
+        <div class="result-container">
+          <div class="result">
+            <p><strong>Revenu :</strong> <span id="income">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
+            <p>
+              <strong>Coût de l'entretien :</strong> <span id="discount-percentage">0</span>
+              <img src="./images/btc_icon.png" alt="BTC icon" width="15px" />
+            </p>
+            <p><strong>Revenu net :</strong> <span id="profit">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
+            <p>
+              <strong>Net en dollars :</strong> <span id="profit-dollar">0</span>
+              <img src="./images/dollar-icon.png" alt="Dollar icon" width="17px" />
+            </p>
+          </div>
         </div>
       </div>
       <div class="btc-right-content">

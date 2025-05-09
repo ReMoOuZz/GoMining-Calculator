@@ -168,6 +168,16 @@ p {
     padding: 0;
 }
 
+.result-container {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 200;
+    
+}
+
 /* ======================================================================================================= */
 /* switch Button */
 
