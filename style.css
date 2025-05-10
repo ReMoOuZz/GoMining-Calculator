@@ -65,9 +65,14 @@ html, body {
 
 h1 {
     font-size: 50px;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
 }
+
+h4 {
+    margin:10px;
+    font-weight: 500;
+} 
 
 .right-content {
     display: flex;
@@ -130,6 +135,7 @@ select:focus {
     background-color: #b3b3b5;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 40px;
 }
 
 .calculator {
@@ -178,6 +184,29 @@ p {
     
 }
 
+.gmt-consommation {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: 200;
+    display: none;
+}
+
+#gmt-service {
+    margin-bottom: 0;
+}
+
+#gmt-consommation-title {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500; 
+    margin-top: 0;
+    margin-bottom: 10;
+}
 /* ======================================================================================================= */
 /* switch Button */
 
@@ -262,4 +291,11 @@ input:checked + .slider::before {
 .btc-icon {
     width: 250px;
     margin-right: 70px;
+}
+
+/* ============================================================================================================ */
+/* promo content */
+
+.promo {
+    margin-top: 50px;
 }

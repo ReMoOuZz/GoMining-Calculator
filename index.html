@@ -56,7 +56,7 @@
             <label for="efficiency">Consomation électrique :</label>
             <input type="text" name="efficiency" id="efficiency" placeholder="Ex : 20" />
             <label for="discount">Pourcentage de remise :</label>
-            <input type="text" name="discount" id="discount" placeholder="Ex : 20" />
+            <input type="text" name="discount" id="discount" placeholder="Ex : 14" />
           </div>
         </div>
         <p>Choix de l'entretien</p>
@@ -74,13 +74,17 @@
           <option value="monthly">Mensuel</option>
           <option value="yearly">Annuel</option>
         </select>
-        <h4>Résultats :</h4>
+        <h4 class="cost-btc-title">Résultats</h4>
         <div class="result-container">
           <div class="result">
             <p><strong>Revenu :</strong> <span id="income">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
-            <p>
-              <strong>Coût de l'entretien :</strong> <span id="discount-percentage">0</span>
+            <p id="btc-service">
+              <strong>Coût de l'entretien :</strong> <span id="discount-percentage-btc">0</span>
               <img src="./images/btc_icon.png" alt="BTC icon" width="15px" />
+            </p>
+            <p class="gmt-consommation" id="gmt-service">
+              <strong>Coût de l'entretien :</strong> <span id="discount-percentage-gmt">0</span>
+              <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
             </p>
             <p><strong>Revenu net :</strong> <span id="profit">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
             <p>
@@ -89,10 +93,40 @@
             </p>
           </div>
         </div>
+        <h4 class="gmt-consommation" id="gmt-consommation-title">Coût en GMT</h4>
+        <div class="gmt-consommation">
+          <p>
+            <strong>Dépense quotidienne :</strong> <span id="daily-charging-cost">0</span>
+            <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
+          </p>
+          <p>
+            <strong>Dépense mensuelle :</strong> <span id="monthly">0</span>
+            <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
+          </p>
+          <p>
+            <strong>Dépense annuelle :</strong> <span id="yearly">0</span>
+            <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
+          </p>
+          <p>
+            <strong>Recharge de zéro :</strong> <span id="full-charging-cost">0</span>
+            <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
+          </p>
+        </div>
       </div>
       <div class="btc-right-content">
         <img class="btc-icon" src="./images/logo2.png" alt="BTC icon" />
       </div>
+    </div>
+    <div class="promo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam sit aspernatur error nisi laborum, tenetur quibusdam suscipit voluptatem
+      eum, vitae tempora. Quia perspiciatis alias vitae non accusamus minus aspernatur voluptatum autem illum temporibus accusantium repellendus optio
+      harum, praesentium animi ullam. Itaque incidunt doloribus praesentium autem expedita suscipit facilis voluptatum. Delectus vero voluptatum error
+      ducimus. Minus expedita eum non deserunt dolore dolores fugiat odit quo beatae voluptatum, excepturi, enim odio eos provident. Fuga accusantium,
+      recusandae aut repellat voluptates ratione est pariatur voluptatibus, iste quod, hic blanditiis aspernatur atque! Minus, minima architecto
+      dolorem aliquid maxime modi, voluptatum vitae vero tempora magnam, maiores sapiente animi nostrum ut nulla molestias? Sunt sed inventore iusto,
+      expedita veritatis perspiciatis distinctio id accusamus quo odio modi! Facilis quae exercitationem laudantium vitae voluptatum. Quaerat,
+      distinctio. Vitae ratione eos sed doloremque, assumenda repudiandae cumque maxime at, molestiae ex in quam magnam, dolorum temporibus voluptate
+      quo sint facere esse.
     </div>
     <script src="./main.js"></script>
   </body>
