@@ -1,18 +1,36 @@
-// async function getCryptoPrices() {
-//     const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gmt-token&vs_currencies=usd';
+async function getCryptoPrices() {
+    const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gmt-token&vs_currencies=usd';
 
-//     try {
-//         const response = await fetch(url)
-//         const data = await response.json()
+    try {
+        const response = await fetch(url)
+        const data = await response.json()
 
-//         document.getElementById("btc-price").textContent = "$ " + data.bitcoin.usd
-//         document.getElementById("gmt-price").textContent = "$ " + data["gmt-token"].usd
-//     } catch (error) {
-//         console.error("erreur lors de la récupération des prix :", error)
-//     }
-// }
+        document.getElementById("btc-value").textContent = data.bitcoin.usd + " $"
+        document.getElementById("gmt-value").textContent = data["gmt-token"].usd + " $"
+    } catch (error) {
+        console.error("erreur lors de la récupération des prix :", error)
+    }
+}
 
-// getCryptoPrices()
+getCryptoPrices()
+
+function copyTexte (button) {
+  const idTexte = button.getAttribute("data-texte-id")
+  const element = document.getElementById(idTexte)
+  const texte = element.value || element.innerText
+
+  navigator.clipboard.writeText(texte)
+  .then(() => {
+    const message = button.querySelector(".message-copy")
+    message.classList.add("visible")
+    setTimeout(() => {
+      message.classList.remove("visible")
+    }, 400);
+  })
+  .catch(err => {
+    console.error("Erreur de copie :", err)
+  })
+}
 
 const toggle = document.getElementById("mode-toggle")
 
@@ -103,6 +121,12 @@ const baseValues = {
     document.getElementById("profit").textContent = (totalReward * multiply).toFixed(8)
     document.getElementById("profit-dollar").textContent = (totalRewardDollar * multiply).toFixed(2)
 
+    if (isGmtMode) {
+      document.getElementById("daily-charging-cost").textContent = (electricityConsomationFinalGmt + serviceFinalGmt).toFixed(2)
+      document.getElementById("monthly").textContent = ((electricityConsomationFinalGmt + serviceFinalGmt) * 30).toFixed(2)
+      document.getElementById("yearly").textContent =((electricityConsomationFinalGmt + serviceFinalGmt) * 365).toFixed(2)
+    }
+
     
     updateBaseValues()
   }
@@ -113,5 +137,43 @@ const baseValues = {
   
   document.getElementById("period").addEventListener("change", recalculateRewards)
   
-  
+  let countDownDate = new Date("april,01 2028 10:00:00");
+  let x = setInterval(function () {
+    let now = new Date().getTime();
+    let distance = countDownDate - now;
+    let years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+    let days = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.querySelector("#countdown").innerHTML = `
+    <div class= 'tag'>
+        <span class='value'>${years}</span>
+        <span class='label'>Années</span>
+        </div>
+    <div class= 'tag'> 
+        <span class= 'value'>${days}</span>
+        <span class='label'>Jours</span>
+        </div>
+    <div class= 'tag'> 
+        <span class= 'value'>${hours}</span>
+        <span class='label'>Heures</span>
+        </div>
+    <div class= 'tag'> 
+        <span class= 'value'>${minutes}</span>
+        <span class='label'>minutes</span>
+        </div>
+    <div class= 'tag'> 
+        <span class= 'value'>${seconds}</span>
+        <span class='label'>secondes</span>
+        </div>
+    `;
+    if (distance < 0) {
+      clearInterval(x);
+      document.querySelector("#countdown").innerHTML = "<span>Terminé !!</span>";
+    }
+  }, 1000);
+
+
 

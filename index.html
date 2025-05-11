@@ -107,10 +107,6 @@
             <strong>Dépense annuelle :</strong> <span id="yearly">0</span>
             <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
           </p>
-          <p>
-            <strong>Recharge de zéro :</strong> <span id="full-charging-cost">0</span>
-            <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
-          </p>
         </div>
       </div>
       <div class="btc-right-content">
@@ -118,15 +114,78 @@
       </div>
     </div>
     <div class="promo">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam sit aspernatur error nisi laborum, tenetur quibusdam suscipit voluptatem
-      eum, vitae tempora. Quia perspiciatis alias vitae non accusamus minus aspernatur voluptatum autem illum temporibus accusantium repellendus optio
-      harum, praesentium animi ullam. Itaque incidunt doloribus praesentium autem expedita suscipit facilis voluptatum. Delectus vero voluptatum error
-      ducimus. Minus expedita eum non deserunt dolore dolores fugiat odit quo beatae voluptatum, excepturi, enim odio eos provident. Fuga accusantium,
-      recusandae aut repellat voluptates ratione est pariatur voluptatibus, iste quod, hic blanditiis aspernatur atque! Minus, minima architecto
-      dolorem aliquid maxime modi, voluptatum vitae vero tempora magnam, maiores sapiente animi nostrum ut nulla molestias? Sunt sed inventore iusto,
-      expedita veritatis perspiciatis distinctio id accusamus quo odio modi! Facilis quae exercitationem laudantium vitae voluptatum. Quaerat,
-      distinctio. Vitae ratione eos sed doloremque, assumenda repudiandae cumque maxime at, molestiae ex in quam magnam, dolorum temporibus voluptate
-      quo sint facere esse.
+      <div class="left-promo-content">
+        <a href="https://gomining.com/?ref=grtw2" target="_blank" rel="noopener noreferrer">
+          <img src="./images/minor.JPG" alt="Minor image" width="300px" id="promo-image" />
+        </a>
+        <p id="promo-code">
+          Utilisez mon code <strong>grtw2</strong> lors de l'achat de votre <strong>Premier</strong> mineur pour benificier de 5% de cashback
+        </p>
+      </div>
+      <div class="center-promo-content">
+        <div class="self-promotion">
+          <p id="promo-title">Soutenez moi !</p>
+          <p id="promo-txt">Si vous aimez mon travail, vous pouvez me supporter en envoyant quelques GMT sur les adresses à droite.</p>
+          <p id="promo-txt">Vous pouvez également utiliser mon lien ou mon code promo à gauche.</p>
+          <p id="promo-txt">
+            Enfin vous pouvez mettre un petit like sur mon Repo Github.
+            <a href="https://github.com/ReMoOuZz/GoMining-Calculator" target="_blank" rel="noopener noreferrer"
+              ><img src="./images/github-mark.png" alt="Github icon" width="20px"
+            /></a>
+          </p>
+        </div>
+      </div>
+      <div class="right-promo-content">
+        <div class="copy-container">
+          <span id="bncAdress">BNC</span>
+          <input type="text" id="text1" value="0x9480487Df73a8BCc78031A5E09C752613186D472" readonly />
+          <button class="copy-button" data-texte-id="text1" onclick="copyTexte(this)">
+            <span class="icon-copy"></span>
+            <span class="message-copy">Copié !</span>
+          </button>
+        </div>
+        <div class="copy-container">
+          <span id="solAdress">SOL</span>
+          <input type="text" id="text2" value="9XBU3c4SVNrVaeP99HopTsc8yYrjJaEXjVav5TxL3bHM" readonly />
+          <button class="copy-button" data-texte-id="text2" onclick="copyTexte(this)">
+            <span class="icon-copy"></span>
+            <span class="message-copy">Copié !</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="countdown-container">
+      <div class="container4">
+        <p class="next-halving">
+          Nombre de jours restants avant le prochain Halving <i><img src="./images/btc_icon.png" alt="BTC icon" width="20px" /></i> 🚀
+        </p>
+      </div>
+      <div class="container5">
+        <div class="item" id="halving">
+          <div id="countdown">
+            <div class="tag">
+              <span class="value">00</span>
+              <span class="label">Années</span>
+            </div>
+            <div class="tag">
+              <span class="value">00</span>
+              <span class="label">Jours</span>
+            </div>
+            <div class="tag">
+              <span class="value">00</span>
+              <span class="label">Heures</span>
+            </div>
+            <div class="tag">
+              <span class="value">00</span>
+              <span class="label">minutes</span>
+            </div>
+            <div class="tag">
+              <span class="value">00</span>
+              <span class="label">secondes</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./main.js"></script>
   </body>
