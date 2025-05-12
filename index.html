@@ -44,7 +44,7 @@
       <div class="gmt-left-content">
         <img class="gmt-icon" src="/images/logo1.png" alt="GMT icon" />
       </div>
-      <div class="calculator">
+      <div class="calculator" id="calculatorElement">
         <div class="calculator-container">
           <div class="calculator-options">
             <label for="Prix du BTC">Prix du Bitcoin :</label>
@@ -63,7 +63,7 @@
         <div class="switch-container">
           <span class="label">BTC</span>
           <label class="switch">
-            <input type="checkbox" id="mode-toggle" />
+            <input type="checkbox" id="mode-toggle" onclick="scrollToElement()" />
             <span class="slider"></span>
           </label>
           <span class="label">GMT</span>
@@ -138,7 +138,7 @@
       <div class="right-promo-content">
         <div class="copy-container">
           <span id="bncAdress">BNC</span>
-          <input type="text" id="text1" value="0x9480487Df73a8BCc78031A5E09C752613186D472" readonly />
+          <div class="fake-input" id="text1">0x9480487Df73a8BCc78031A5E09C752613186D472</div>
           <button class="copy-button" data-texte-id="text1" onclick="copyTexte(this)">
             <span class="icon-copy"></span>
             <span class="message-copy">Copié !</span>
@@ -146,7 +146,7 @@
         </div>
         <div class="copy-container">
           <span id="solAdress">SOL</span>
-          <input type="text" id="text2" value="9XBU3c4SVNrVaeP99HopTsc8yYrjJaEXjVav5TxL3bHM" readonly />
+          <div class="fake-input" id="text2">9XBU3c4SVNrVaeP99HopTsc8yYrjJaEXjVav5TxL3bHM</div>
           <button class="copy-button" data-texte-id="text2" onclick="copyTexte(this)">
             <span class="icon-copy"></span>
             <span class="message-copy">Copié !</span>
@@ -157,7 +157,7 @@
     <div class="countdown-container">
       <div class="container4">
         <p class="next-halving">
-          Nombre de jours restants avant le prochain Halving <i><img src="./images/btc_icon.png" alt="BTC icon" width="20px" /></i> 🚀
+          Compte à rebours : Jours restants avant le prochain Halving <i><img src="./images/btc_icon.png" alt="BTC icon" width="20px" /></i> 🚀
         </p>
       </div>
       <div class="container5">

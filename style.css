@@ -93,6 +93,7 @@ h4 {
     padding: 8px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
 button:hover {
@@ -116,6 +117,7 @@ select {
     padding: 5px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 select:focus {
@@ -258,6 +260,7 @@ p {
     background-color: white;
     transition: .4s;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 input:checked + .slider {
@@ -371,12 +374,28 @@ input:checked + .slider::before {
     gap: 10px;
 }
 
-.right-promo-content input {
-    width: 200px;
-    background-color: #e0e0e0;
-    padding: 5px;
-    border-radius: 5px;
+.copy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.fake-input {
+  display: inline-block;
+  width: 200px;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  user-select: text;
+}
+
 
 .copy-button {
     background-color: #f0f0f0;

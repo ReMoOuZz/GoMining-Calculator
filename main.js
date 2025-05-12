@@ -1,36 +1,50 @@
-async function getCryptoPrices() {
-    const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gmt-token&vs_currencies=usd';
+// async function getCryptoPrices() {
+//     const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gmt-token&vs_currencies=usd';
 
-    try {
-        const response = await fetch(url)
-        const data = await response.json()
+//     try {
+//         const response = await fetch(url)
+//         const data = await response.json()
 
-        document.getElementById("btc-value").textContent = data.bitcoin.usd + " $"
-        document.getElementById("gmt-value").textContent = data["gmt-token"].usd + " $"
-    } catch (error) {
-        console.error("erreur lors de la récupération des prix :", error)
-    }
+//         document.getElementById("btc-value").textContent = data.bitcoin.usd + " $"
+//         document.getElementById("gmt-value").textContent = data["gmt-token"].usd + " $"
+//     } catch (error) {
+//         console.error("erreur lors de la récupération des prix :", error)
+//     }
+// }
+
+// getCryptoPrices()
+function scrollToElement () {
+  const element = document.getElementById("calculatorElement")
+  element.scrollIntoView({behavior : "smooth", block :"center"})
 }
 
-getCryptoPrices()
+const adresses = {
+  text1: "0x9480487Df73a8BCc78031A5E09C752613186D472",
+  text2: "9XBU3c4SVNrVaeP99HopTsc8yYrjJaEXjVav5TxL3bHM"
+};
 
-function copyTexte (button) {
-  const idTexte = button.getAttribute("data-texte-id")
-  const element = document.getElementById(idTexte)
-  const texte = element.value || element.innerText
+function copyTexte(button) {
+  const idTexte = button.getAttribute("data-texte-id");
+  const texte = adresses[idTexte]; // on lit dans l'objet sécurisé
+
+  if (!texte) {
+    console.warn("Adresse introuvable pour : " + idTexte);
+    return;
+  }
 
   navigator.clipboard.writeText(texte)
-  .then(() => {
-    const message = button.querySelector(".message-copy")
-    message.classList.add("visible")
-    setTimeout(() => {
-      message.classList.remove("visible")
-    }, 400);
-  })
-  .catch(err => {
-    console.error("Erreur de copie :", err)
-  })
+    .then(() => {
+      const message = button.querySelector(".message-copy");
+      message.classList.add("visible");
+      setTimeout(() => {
+        message.classList.remove("visible");
+      }, 400);
+    })
+    .catch(err => {
+      console.error("Erreur de copie :", err);
+    });
 }
+
 
 const toggle = document.getElementById("mode-toggle")
 
