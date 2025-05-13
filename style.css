@@ -147,7 +147,7 @@ select:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: #34343a;
     color: white;
     border-radius: 10px;
@@ -266,10 +266,12 @@ p {
 
 input:checked + .slider {
     background-color: #7540ef ;
+    cursor: pointer;
 }
 
 input:checked + .slider::before {
     transform: translate(24px);
+    cursor: pointer;
 }
 
 /* ===================================================================================================== */
@@ -359,7 +361,7 @@ input:checked + .slider::before {
     text-align: center;
 }
 
-#promo-txt {
+.promo-txt {
     margin: 10px;
     font-weight: 400;
 }

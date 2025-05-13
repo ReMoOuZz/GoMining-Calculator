@@ -11,6 +11,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap");
     </style>
+    <script defer src="./lang/translate.js"></script>
   </head>
   <body>
     <div class="header">
@@ -29,7 +30,7 @@
           <h1>GoMining Calculator</h1>
         </div>
         <div class="right-content">
-          <button class="connexion">Connexion</button>
+          <button class="connexion" id="button-warning">Connexion</button>
           <div class="language-switcher">
             <i class="fa-solid fa-earth-europe"></i>
             <label for="language"></label>
@@ -95,7 +96,7 @@
           </div>
         </div>
         <h4 class="gmt-consommation" id="gmt-consommation-title">Coût en GMT</h4>
-        <div class="gmt-consommation">
+        <div class="gmt-consommation" id="gmt-consommation-block">
           <p>
             <strong>Dépense quotidienne :</strong> <span id="daily-charging-cost">0</span>
             <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
@@ -120,15 +121,15 @@
           <img src="./images/minor.JPG" alt="Minor image" width="300px" id="promo-image" />
         </a>
         <p id="promo-code">
-          Utilisez mon code <strong>grtw2</strong> lors de l'achat de votre <strong>Premier</strong> mineur pour benificier de 5% de cashback
+          Utilisez mon code <strong>grtw2</strong> lors de l'achat de votre <strong>Premier</strong> mineur pour benificier de 5% de cashback.
         </p>
       </div>
       <div class="center-promo-content">
         <div class="self-promotion">
           <p id="promo-title">Soutenez moi !</p>
-          <p id="promo-txt">Si vous aimez mon travail, vous pouvez me supporter en envoyant quelques GMT sur les adresses BNC ou SOL.</p>
-          <p id="promo-txt">Vous pouvez également utiliser mon lien ou mon code promo.</p>
-          <p id="promo-txt">
+          <p class="promo-txt" id="promo-txt-1">Si vous aimez mon travail, vous pouvez me supporter en envoyant quelques GMT sur les adresses BNC ou SOL.</p>
+          <p class="promo-txt id="promo-txt-2">Vous pouvez également utiliser mon lien ou mon code promo.</p>
+          <p class="promo-txt id="promo-txt-3">
             Enfin vous pouvez mettre un petit like sur mon Repo Github.
             <a href="https://github.com/ReMoOuZz/GoMining-Calculator" target="_blank" rel="noopener noreferrer"
               ><img src="./images/github-mark.png" alt="Github icon" width="20px"
@@ -142,7 +143,7 @@
           <div class="fake-input" id="text1">0x9480487Df73a8BCc78031A5E09C752613186D472</div>
           <button class="copy-button" data-texte-id="text1" onclick="copyTexte(this)">
             <span class="icon-copy"></span>
-            <span class="message-copy">Copié !</span>
+            <span class="message-copy">Copié!</span>
           </button>
         </div>
         <div class="copy-container">
@@ -150,14 +151,14 @@
           <div class="fake-input" id="text2">9XBU3c4SVNrVaeP99HopTsc8yYrjJaEXjVav5TxL3bHM</div>
           <button class="copy-button" data-texte-id="text2" onclick="copyTexte(this)">
             <span class="icon-copy"></span>
-            <span class="message-copy">Copié !</span>
+            <span class="message-copy">Copié!</span>
           </button>
         </div>
       </div>
     </div>
     <div class="countdown-container">
       <div class="container4">
-        <p class="next-halving">
+        <p class="next-halving" id="next-halving">
           Compte à rebours : Jours restants avant le prochain Halving <i><img src="./images/btc_icon.png" alt="BTC icon" width="20px" /></i> 🚀
         </p>
       </div>
@@ -190,12 +191,12 @@
     </div>
     <footer>
       <div class="footer-container">
-        <div class="footer-section">
+        <div class="footer-section" id="footer-about">
           <h3>À propos</h3>
-          <p>Ce site est un projet pour aider les utilisateurs de l'application GoMining dans leurs plans d'investissements</p>
-          <p>Toutes les données sont à titre indicatifs et en aucun cas un conseil en investissement</p>
+          <p>Ce site est un projet pour aider les utilisateurs de l'application GoMining dans leurs plans d'investissements.</p>
+          <p>Toutes les données sont à titre indicatifs et en aucun cas un conseil en investissemen.</p>
         </div>
-        <div class="footer-section">
+        <div class="footer-section" id="footer-credits">
           <h3>Credits</h3>
           <p>
             Ce site utilise l'API de
@@ -203,11 +204,11 @@
             de prix en temps réel.
           </p>
 
-          <p>Merci à eux pour leur service</p>
+          <p>Merci à eux pour leur service.</p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2025 GoMining Calculator. Tous droits réservés | <a href="./mentions-legales.html">Mentions légales</a></p>
+      <div class="footer-bottom" id="footer-rights">
+        <p>© 2025 GoMining Calculator. Tous droits réservés | <a href="./legal_notice.html">Mentions légales</a></p>
       </div>
     </footer>
     <script src="./main.js"></script>

@@ -1,20 +1,31 @@
-// async function getCryptoPrices() {
-//     const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gmt-token&vs_currencies=usd';
+async function getCryptoPrices() {
+    const url = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gmt-token&vs_currencies=usd';
 
-//     try {
-//         const response = await fetch(url)
-//         const data = await response.json()
+    try {
+        const response = await fetch(url)
+        const data = await response.json()
 
-//         document.getElementById("btc-value").textContent = data.bitcoin.usd + " $"
-//         document.getElementById("gmt-value").textContent = data["gmt-token"].usd + " $"
-//     } catch (error) {
-//         console.error("erreur lors de la récupération des prix :", error)
-//     }
-// }
+        document.getElementById("btc-value").textContent = data.bitcoin.usd + " $"
+        document.getElementById("gmt-value").textContent = data["gmt-token"].usd + " $"
+    } catch (error) {
+        console.error("erreur lors de la récupération des prix :", error)
+    }
+}
 
-// getCryptoPrices()
+getCryptoPrices()
+
+function DisplayWarning () {
+  const warning = document.getElementById("button-warning")
+  warning.addEventListener("click", ()=> {
+    alert("🚧 En construction 🚧 !\n Cette fonctionnalité arrive bientôt !")
+    return
+  })
+}
+
+DisplayWarning()
+
 function scrollToElement () {
-  const element = document.getElementById("calculatorElement")
+  const element = document.getElementById("mode-toggle")
   element.scrollIntoView({behavior : "smooth", block :"center"})
 }
 
@@ -25,7 +36,7 @@ const adresses = {
 
 function copyTexte(button) {
   const idTexte = button.getAttribute("data-texte-id");
-  const texte = adresses[idTexte]; // on lit dans l'objet sécurisé
+  const texte = adresses[idTexte]; 
 
   if (!texte) {
     console.warn("Adresse introuvable pour : " + idTexte);
