@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoMining Calculator</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsive.css" />
     <link rel="icon" href="./images/gmt-con.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
@@ -42,7 +43,7 @@
     </div>
     <div class="content-container">
       <div class="gmt-left-content">
-        <img class="gmt-icon" src="/images/logo1.png" alt="GMT icon" />
+        <img class="gmt-icon" src="/images/logo1.png" alt="GMT icon" id="responsive-image" />
       </div>
       <div class="calculator" id="calculatorElement">
         <div class="calculator-container">
@@ -110,7 +111,7 @@
         </div>
       </div>
       <div class="btc-right-content">
-        <img class="btc-icon" src="./images/logo2.png" alt="BTC icon" />
+        <img class="btc-icon" src="./images/logo2.png" alt="BTC icon" id="responsive-image" />
       </div>
     </div>
     <div class="promo">
@@ -125,8 +126,8 @@
       <div class="center-promo-content">
         <div class="self-promotion">
           <p id="promo-title">Soutenez moi !</p>
-          <p id="promo-txt">Si vous aimez mon travail, vous pouvez me supporter en envoyant quelques GMT sur les adresses à droite.</p>
-          <p id="promo-txt">Vous pouvez également utiliser mon lien ou mon code promo à gauche.</p>
+          <p id="promo-txt">Si vous aimez mon travail, vous pouvez me supporter en envoyant quelques GMT sur les adresses BNC ou SOL.</p>
+          <p id="promo-txt">Vous pouvez également utiliser mon lien ou mon code promo.</p>
           <p id="promo-txt">
             Enfin vous pouvez mettre un petit like sur mon Repo Github.
             <a href="https://github.com/ReMoOuZz/GoMining-Calculator" target="_blank" rel="noopener noreferrer"
@@ -187,6 +188,28 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>À propos</h3>
+          <p>Ce site est un projet pour aider les utilisateurs de l'application GoMining dans leurs plans d'investissements</p>
+          <p>Toutes les données sont à titre indicatifs et en aucun cas un conseil en investissement</p>
+        </div>
+        <div class="footer-section">
+          <h3>Credits</h3>
+          <p>
+            Ce site utilise l'API de
+            <a href="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gmt-token&vs_currencies=usd">GoinGecko </a> pour récuperer les données
+            de prix en temps réel.
+          </p>
+
+          <p>Merci à eux pour leur service</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 GoMining Calculator. Tous droits réservés | <a href="./mentions-legales.html">Mentions légales</a></p>
+      </div>
+    </footer>
     <script src="./main.js"></script>
   </body>
 </html>

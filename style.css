@@ -56,7 +56,7 @@ html, body {
 
 .center-content {
     display: flex;
-    flex: 2;
+    flex: 1;
     justify-content: center;
     align-items: center;
     font-size: 30px;
@@ -170,6 +170,7 @@ select:focus {
   
 .calculator-options input {
     width: 100px;
+    border-radius: 3px;
 }  
 
 p {
@@ -371,6 +372,7 @@ input:checked + .slider::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
     gap: 10px;
 }
 
@@ -466,6 +468,7 @@ input:checked + .slider::before {
 
 .countdown-container {
     background-color: #b3b3b5;
+    padding-bottom: 30px;
 }
 
 .container4 { 
@@ -477,7 +480,6 @@ input:checked + .slider::before {
     border: 3px solid #7540ef;
     border-radius: 5px;
     overflow: hidden;                     
-    
 }
 
 .container4 > :first-child{
@@ -489,6 +491,7 @@ input:checked + .slider::before {
     white-space: nowrap;
     animation: defilement-next-halving 15s infinite linear;
 }
+
 
 @keyframes defilement-next-halving{
     0%{
@@ -526,4 +529,65 @@ input:checked + .slider::before {
     justify-content: center;
     margin-top: 20px;
     gap: 15px;
+}
+
+/* =========================================================================================================== */
+/* footer */
+
+footer {
+    background-color: #34343a;
+    color: white;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    margin: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: #4639bd;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section p {
+    padding: 5px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #4639bd;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 20px 10px;
+    border-top: 1px solid #4639bd;
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+    color: #4639bd;
+    cursor: pointer;
 }
