@@ -65,9 +65,21 @@
 @media (max-width: 3440px) and (min-width: 1920px) {
     
     .content-container{
-        height: 68%;
+        height: 70%;
     }
     .container4 {
+        max-width: 100%;
+    }
+    .btc-icon {
+        width: 350px;
+    }
+    .gmt-icon {
+       width: 300px; 
+    }
+    .calculator-options {
+        max-width: 100%;
+    }
+    .result-container {
         max-width: 100%;
     }
 }
