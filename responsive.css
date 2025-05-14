@@ -65,7 +65,7 @@
 @media (max-width: 3440px) and (min-width: 1920px) {
     
     .content-container{
-        height: 70%;
+        height: 68%;
     }
     .container4 {
         max-width: 100%;
@@ -76,10 +76,5 @@
     .gmt-icon {
        width: 300px; 
     }
-    .calculator-options {
-        max-width: 100%;
-    }
-    .result-container {
-        max-width: 100%;
-    }
+   
 }
