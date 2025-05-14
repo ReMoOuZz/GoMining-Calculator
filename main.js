@@ -14,15 +14,18 @@ async function getCryptoPrices() {
 
 getCryptoPrices()
 
-function DisplayWarning () {
-  const warning = document.getElementById("button-warning")
-  warning.addEventListener("click", ()=> {
+function DisplayWarning (id) {
+  const warning = document.getElementById(id)
+  if (warning) {
+    warning.addEventListener("click", ()=> {
     alert("🚧 En construction 🚧 !\n Cette fonctionnalité arrive bientôt !")
     return
-  })
+    })
+  }
 }
 
-DisplayWarning()
+DisplayWarning("button-warning")
+DisplayWarning("language")
 
 function scrollToElement () {
   const element = document.getElementById("mode-toggle")

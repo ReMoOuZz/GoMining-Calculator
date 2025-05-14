@@ -11,7 +11,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap");
     </style>
-    <script defer src="./lang/translate.js"></script>
+
   </head>
   <body>
     <div class="header">
@@ -19,22 +19,22 @@
         <div class="left-content">
           <div class="btc-content">
             <h6 class="coin-title BTC">Bitcoin</h6>
-            <p class="price" id="btc-value">Chargement</p>
+            <p class="price" id="btc-value" data-i18n="Loading">Chargement</p>
           </div>
           <div class="gmt-content">
             <h6 class="coin-title GMT">GoMining</h6>
-            <p class="price" id="gmt-value">Chargement</p>
+            <p class="price" id="gmt-value" data-i18n="Loading">Chargement</p>
           </div>
         </div>
         <div class="center-content">
           <h1>GoMining Calculator</h1>
         </div>
         <div class="right-content">
-          <button class="connexion" id="button-warning">Connexion</button>
+          <button class="connexion" id="button-warning" data-i18n="login">Connexion</button>
           <div class="language-switcher">
             <i class="fa-solid fa-earth-europe"></i>
             <label for="language"></label>
-            <select id="language" onchange="changeLanguage(this.value)">
+            <select id="language">
               <option value="fr">Français</option>
               <option value="en">English</option>
             </select>
@@ -49,19 +49,19 @@
       <div class="calculator" id="calculatorElement">
         <div class="calculator-container">
           <div class="calculator-options">
-            <label for="Prix du BTC">Prix du Bitcoin :</label>
+            <label for="Prix du BTC" data-i18n="Bitcoin price">Prix du Bitcoin :</label>
             <input type="text" name="BTC-price" id="btc-price" placeholder="Ex : 95000" />
-            <label for="Prix du GMT">Prix du GMT :</label>
+            <label for="Prix du GMT" data-i18n="GMT price">Prix du GMT :</label>
             <input type="text" name="GMT-price" id="gmt-price" placeholder="Ex : 0.42" />
-            <label for="TH power">Puissance en TH :</label>
+            <label for="TH power" data-i18n="TH power">Puissance en TH :</label>
             <input type="text" name="TH-power " id="th-power" placeholder="Ex : 100" />
-            <label for="efficiency">Consomation électrique :</label>
+            <label for="efficiency" data-i18n="electricity consumption">Consommation électrique :</label>
             <input type="text" name="efficiency" id="efficiency" placeholder="Ex : 20" />
-            <label for="discount">Pourcentage de remise :</label>
+            <label for="discount" data-i18n="discount percentage">Pourcentage de remise :</label>
             <input type="text" name="discount" id="discount" placeholder="Ex : 14" />
           </div>
         </div>
-        <p>Choix de l'entretien</p>
+        <p data-i18n="maintenance option">Choix de l'entretien</p>
         <div class="switch-container">
           <span class="label">BTC</span>
           <label class="switch">
@@ -72,24 +72,24 @@
         </div>
         <label for="period"></label>
         <select id="period">
-          <option value="daily">Quotidien</option>
-          <option value="monthly">Mensuel</option>
-          <option value="yearly">Annuel</option>
+          <option value="daily" data-i18n="Daily">Quotidien</option>
+          <option value="monthly" data-i18n="Monthly">Mensuel</option>
+          <option value="yearly"data-i18n="Yearly">Annuel</option>
         </select>
-        <h4 class="cost-btc-title">Résultats</h4>
+        <h4 class="cost-btc-title" data-i18n="result">Résultats</h4>
         <div class="result-container">
           <div class="result">
-            <p><strong>Revenu :</strong> <span id="income">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
-            <p id="btc-service">
-              <strong>Coût de l'entretien :</strong> <span id="discount-percentage-btc">0</span>
+            <p data-i18n="Revenue"><strong>Revenu :</strong> <span id="income">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
+            <p id="btc-service"data-i18n="service-cost">
+              <strong >Coût d'entretien :</strong> <span id="discount-percentage-btc">0</span>
               <img src="./images/btc_icon.png" alt="BTC icon" width="15px" />
             </p>
-            <p class="gmt-consommation" id="gmt-service">
-              <strong>Coût de l'entretien :</strong> <span id="discount-percentage-gmt">0</span>
+            <p class="gmt-consommation" id="gmt-service" data-i18n="service-cost">
+              <strong>Coût d'entretien :</strong> <span id="discount-percentage-gmt">0</span>
               <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
             </p>
-            <p><strong>Revenu net :</strong> <span id="profit">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
-            <p>
+            <p data-i18n="net-revenue"><strong>Revenu net :</strong> <span id="profit">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
+            <p data-i18n="net-revenue-dollar">
               <strong>Net en dollars :</strong> <span id="profit-dollar">0</span>
               <img src="./images/dollar-icon.png" alt="Dollar icon" width="17px" />
             </p>
@@ -97,15 +97,15 @@
         </div>
         <h4 class="gmt-consommation" id="gmt-consommation-title">Coût en GMT</h4>
         <div class="gmt-consommation" id="gmt-consommation-block">
-          <p>
+          <p data-i18n="daily-cost">
             <strong>Dépense quotidienne :</strong> <span id="daily-charging-cost">0</span>
             <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
           </p>
-          <p>
+          <p data-i18n="monthly-cost">
             <strong>Dépense mensuelle :</strong> <span id="monthly">0</span>
             <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
           </p>
-          <p>
+          <p data-i18n="yearly-cost">
             <strong>Dépense annuelle :</strong> <span id="yearly">0</span>
             <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
           </p>
@@ -120,16 +120,16 @@
         <a href="https://gomining.com/?ref=grtw2" target="_blank" rel="noopener noreferrer">
           <img src="./images/minor.JPG" alt="Minor image" width="300px" id="promo-image" />
         </a>
-        <p id="promo-code">
-          Utilisez mon code <strong>grtw2</strong> lors de l'achat de votre <strong>Premier</strong> mineur pour benificier de 5% de cashback.
+        <p id="promo-code" data-i18n="promo-code">
+          Utilisez mon code <strong>grtw2</strong> lors de l'achat de votre <strong>Premier</strong> mineur pour bénificier de 5% de cashback.
         </p>
       </div>
       <div class="center-promo-content">
         <div class="self-promotion">
-          <p id="promo-title">Soutenez moi !</p>
-          <p class="promo-txt" id="promo-txt-1">Si vous aimez mon travail, vous pouvez me supporter en envoyant quelques GMT sur les adresses BNC ou SOL.</p>
-          <p class="promo-txt id="promo-txt-2">Vous pouvez également utiliser mon lien ou mon code promo.</p>
-          <p class="promo-txt id="promo-txt-3">
+          <p id="promo-title" data-i18n="support-me">Soutenez moi !</p>
+          <p class="promo-txt" id="promo-txt-1" data-i18n="promo-txt-1">Si vous aimez mon travail, vous pouvez me supporter en envoyant quelques GMT sur ces adresses BNC ou SOL.</p>
+          <p class="promo-txt id="promo-txt-2" data-i18n="promo-txt-2">Vous pouvez également utiliser mon lien ou mon code promo.</p>
+          <p class="promo-txt id="promo-txt-3" data-i18n="promo-txt-3">
             Enfin vous pouvez mettre un petit like sur mon Repo Github.
             <a href="https://github.com/ReMoOuZz/GoMining-Calculator" target="_blank" rel="noopener noreferrer"
               ><img src="./images/github-mark.png" alt="Github icon" width="20px"
@@ -158,8 +158,8 @@
     </div>
     <div class="countdown-container">
       <div class="container4">
-        <p class="next-halving" id="next-halving">
-          Compte à rebours : Jours restants avant le prochain Halving <i><img src="./images/btc_icon.png" alt="BTC icon" width="20px" /></i> 🚀
+        <p class="next-halving" id="next-halving" data-i18n="next-halving">
+          Compte à rebours : Temps restants avant le prochain Halving <i><img src="./images/btc_icon.png" alt="BTC icon" width="20px" /></i> 🚀
         </p>
       </div>
       <div class="container5">
@@ -167,23 +167,23 @@
           <div id="countdown">
             <div class="tag">
               <span class="value">00</span>
-              <span class="label">Années</span>
+              <span class="label" data-i18n="year">Années</span>
             </div>
             <div class="tag">
               <span class="value">00</span>
-              <span class="label">Jours</span>
+              <span class="label" data-i18n="day">Jours</span>
             </div>
             <div class="tag">
               <span class="value">00</span>
-              <span class="label">Heures</span>
+              <span class="label" data-i18n="hours">Heures</span>
             </div>
             <div class="tag">
               <span class="value">00</span>
-              <span class="label">minutes</span>
+              <span class="label" data-i18n="minutes">minutes</span>
             </div>
             <div class="tag">
               <span class="value">00</span>
-              <span class="label">secondes</span>
+              <span class="label" data-i18n="seconds">secondes</span>
             </div>
           </div>
         </div>
@@ -192,23 +192,23 @@
     <footer>
       <div class="footer-container">
         <div class="footer-section" id="footer-about">
-          <h3>À propos</h3>
-          <p>Ce site est un projet pour aider les utilisateurs de l'application GoMining dans leurs plans d'investissements.</p>
-          <p>Toutes les données sont à titre indicatifs et en aucun cas un conseil en investissemen.</p>
+          <h3 data-i18n="about">À propos</h3>
+          <p data-i18n="about-txt-1">Ce site est un projet pour aider les utilisateurs de l'application GoMining dans leurs plans d'investissements.</p>
+          <p data-i18n="about-txt-2">Toutes les données sont à titre indicatifs et en aucun cas un conseil en investissement.</p>
         </div>
         <div class="footer-section" id="footer-credits">
-          <h3>Credits</h3>
-          <p>
+          <h3 data-i18n="Credits">Credits</h3>
+          <p data-i18n="about-txt-3">
             Ce site utilise l'API de
-            <a href="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gmt-token&vs_currencies=usd">GoinGecko </a> pour récuperer les données
+            <a href="https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,gmt-token&vs_currencies=usd">GoinGecko </a> pour récupérer les données
             de prix en temps réel.
           </p>
 
-          <p>Merci à eux pour leur service.</p>
+          <p data-i18n="about-txt-4">Merci à eux pour leur service.</p>
         </div>
       </div>
       <div class="footer-bottom" id="footer-rights">
-        <p>© 2025 GoMining Calculator. Tous droits réservés | <a href="./legal_notice.html">Mentions légales</a></p>
+        <p data-i18n="footer-rights">© 2025 GoMining Calculator. Tous droits réservés | <a href="./legal_notice.html">Mentions légales</a></p>
       </div>
     </footer>
     <script src="./main.js"></script>

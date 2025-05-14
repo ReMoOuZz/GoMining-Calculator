@@ -3,13 +3,19 @@
 Rewards Calculator for GoMining :
 A simple website to Calculate rewards for GoMining App, build in HTML, CSS and JavaScript.
 
+# Presentation
+
+![Screenshot of the Homepage](./images/presentation.png)
+
 # Structure
 
 GoMining Calculator/
 │
 ├── images
 ├── index.html
+├── legal_notice.html
 ├── style.css
+├── responsive.js
 ├── main.js
 └── README.md
 
