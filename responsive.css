@@ -62,10 +62,16 @@
     } 
 }
 
+@media (max-width : 1920px) and (min-width : 1024px) {
+    .content-container{
+        height: 70%;
+    }
+}
+
 @media (max-width: 3440px) and (min-width: 1920px) {
     
     .content-container{
-        height: 68%;
+        height: 72%;
     }
     .container4 {
         max-width: 100%;
