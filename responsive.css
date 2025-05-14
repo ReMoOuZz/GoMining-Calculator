@@ -62,4 +62,8 @@
     } 
 }
 
-
+@media (max-width: 2560px) and (min-width: 1440px) {
+    .content-container{
+        height: 68%;
+    }
+}

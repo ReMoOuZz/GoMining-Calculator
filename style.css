@@ -147,6 +147,7 @@ select:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 300px;
     margin-top: 30px;
     background-color: #34343a;
     color: white;
@@ -291,15 +292,6 @@ input:checked + .slider::before {
     align-items: center;
 }
 
-.gmt-icon {
-    width: 200px;
-    margin-top: 30%;
-}
-
-.btc-icon {
-    width: 250px;
-    margin-bottom: 20%;
-}
 
 /* ============================================================================================================ */
 /* promo content */

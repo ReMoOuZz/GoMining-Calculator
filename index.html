@@ -11,7 +11,6 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap");
     </style>
-
   </head>
   <body>
     <div class="header">
@@ -44,7 +43,7 @@
     </div>
     <div class="content-container">
       <div class="gmt-left-content">
-        <img class="gmt-icon" src="/images/logo1.png" alt="GMT icon" id="responsive-image" />
+        <img class="gmt-icon" src="./images/logo1.png" alt="GMT icon" id="responsive-image" width="200px" />
       </div>
       <div class="calculator" id="calculatorElement">
         <div class="calculator-container">
@@ -74,21 +73,25 @@
         <select id="period">
           <option value="daily" data-i18n="Daily">Quotidien</option>
           <option value="monthly" data-i18n="Monthly">Mensuel</option>
-          <option value="yearly"data-i18n="Yearly">Annuel</option>
+          <option value="yearly" data-i18n="Yearly">Annuel</option>
         </select>
         <h4 class="cost-btc-title" data-i18n="result">Résultats</h4>
         <div class="result-container">
           <div class="result">
-            <p data-i18n="Revenue"><strong>Revenu :</strong> <span id="income">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
-            <p id="btc-service"data-i18n="service-cost">
-              <strong >Coût d'entretien :</strong> <span id="discount-percentage-btc">0</span>
+            <p data-i18n="Revenue">
+              <strong>Revenu :</strong> <span id="income">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" />
+            </p>
+            <p id="btc-service" data-i18n="service-cost">
+              <strong>Coût d'entretien :</strong> <span id="discount-percentage-btc">0</span>
               <img src="./images/btc_icon.png" alt="BTC icon" width="15px" />
             </p>
             <p class="gmt-consommation" id="gmt-service" data-i18n="service-cost">
               <strong>Coût d'entretien :</strong> <span id="discount-percentage-gmt">0</span>
               <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
             </p>
-            <p data-i18n="net-revenue"><strong>Revenu net :</strong> <span id="profit">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
+            <p data-i18n="net-revenue">
+              <strong>Revenu net :</strong> <span id="profit">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" />
+            </p>
             <p data-i18n="net-revenue-dollar">
               <strong>Net en dollars :</strong> <span id="profit-dollar">0</span>
               <img src="./images/dollar-icon.png" alt="Dollar icon" width="17px" />
@@ -112,7 +115,7 @@
         </div>
       </div>
       <div class="btc-right-content">
-        <img class="btc-icon" src="./images/logo2.png" alt="BTC icon" id="responsive-image" />
+        <img class="btc-icon" src="./images/logo2.png" alt="BTC icon" id="responsive-image" width="250px" />
       </div>
     </div>
     <div class="promo">
@@ -127,9 +130,11 @@
       <div class="center-promo-content">
         <div class="self-promotion">
           <p id="promo-title" data-i18n="support-me">Soutenez moi !</p>
-          <p class="promo-txt" id="promo-txt-1" data-i18n="promo-txt-1">Si vous aimez mon travail, vous pouvez me supporter en envoyant quelques GMT sur ces adresses BNC ou SOL.</p>
-          <p class="promo-txt id="promo-txt-2" data-i18n="promo-txt-2">Vous pouvez également utiliser mon lien ou mon code promo.</p>
-          <p class="promo-txt id="promo-txt-3" data-i18n="promo-txt-3">
+          <p class="promo-txt" id="promo-txt-1" data-i18n="promo-txt-1">
+            Si vous aimez mon travail, vous pouvez me supporter en envoyant quelques GMT sur ces adresses BNC ou SOL.
+          </p>
+          <p class="promo-txt" id="promo-txt-2" data-i18n="promo-txt-2">Vous pouvez également utiliser mon lien ou mon code promo.</p>
+          <p class="promo-txt" id="promo-txt-3" data-i18n="promo-txt-3">
             Enfin vous pouvez mettre un petit like sur mon Repo Github.
             <a href="https://github.com/ReMoOuZz/GoMining-Calculator" target="_blank" rel="noopener noreferrer"
               ><img src="./images/github-mark.png" alt="Github icon" width="20px"
@@ -193,7 +198,9 @@
       <div class="footer-container">
         <div class="footer-section" id="footer-about">
           <h3 data-i18n="about">À propos</h3>
-          <p data-i18n="about-txt-1">Ce site est un projet pour aider les utilisateurs de l'application GoMining dans leurs plans d'investissements.</p>
+          <p data-i18n="about-txt-1">
+            Ce site est un projet pour aider les utilisateurs de l'application GoMining dans leurs plans d'investissements.
+          </p>
           <p data-i18n="about-txt-2">Toutes les données sont à titre indicatifs et en aucun cas un conseil en investissement.</p>
         </div>
         <div class="footer-section" id="footer-credits">
