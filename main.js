@@ -182,7 +182,7 @@ const baseValues = {
   
   document.getElementById("period").addEventListener("change", recalculateRewards)
   
-  let countDownDate = new Date("2028-04-01T10:00:00");
+  let countDownDate = new Date("april,01 2028 10:00:00");
   let x = setInterval(function () {
     let now = new Date().getTime();
     let distance = countDownDate - now;
