@@ -64,10 +64,12 @@
 
 @media (max-width : 1920px) and (min-width : 1024px) {
     .content-container{
-        height: 90%;
+        max-height: 100vh;
+        height: 80%;
+    
     }
     .container {
-        height: 10%;
+        height: 20vh;
     }
 }
 
