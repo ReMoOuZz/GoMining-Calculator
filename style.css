@@ -152,7 +152,6 @@ select:focus {
     align-items: center;
     height: auto;
     flex-shrink: 0;
-    max-height: fit-content;
     max-width: 300px;
     margin-top: 30px;
     background-color: #34343a;
