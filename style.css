@@ -8,9 +8,6 @@ html, body {
     padding: 0;
 }
 
-* {
-    box-sizing: border-box;
-}
 
 /* ======================================================================================================= */
 /* Header */
@@ -141,6 +138,7 @@ select:focus {
 
   .content-container {
     background-color: #b3b3b5;
+    height: auto;
     display: flex;
     justify-content: space-between;
     padding-bottom: 40px;
@@ -153,6 +151,8 @@ select:focus {
     justify-content: center;
     align-items: center;
     height: auto;
+    flex-shrink: 0;
+    max-height: fit-content;
     max-width: 300px;
     margin-top: 30px;
     background-color: #34343a;
