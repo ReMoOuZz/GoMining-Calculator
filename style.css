@@ -153,7 +153,7 @@ select:focus {
     background-color: #34343a;
     color: white;
     border-radius: 10px;
-    border: 10px solid #7540ef ;
+    border: 7px solid #7540ef ;
 }
 
 .calculator-container {
@@ -169,6 +169,12 @@ select:focus {
     align-items: center;
     max-width: 250px;
   }
+
+  .calculator-options input {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    /* color: black; */
+  }    
   
 .calculator-options input {
     width: 100px;
