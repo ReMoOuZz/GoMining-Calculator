@@ -1,4 +1,4 @@
-@media (max-width: 450px) {
+@media (max-width: 695px) {
    .tag {
         margin: 3px;
         padding: 3px;
@@ -62,14 +62,6 @@
     } 
 }
 
-@media (max-width : 1920px) and (min-width : 1024px) {
-    .content-container{
-        height: 80%;
-    }
-    .container {
-        height: 20%;
-    }
-}
 
 @media (max-width: 3440px) and (min-width: 1920px) {
     

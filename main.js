@@ -7,10 +7,27 @@ async function getCryptoPrices() {
 
         document.getElementById("btc-value").textContent = data.bitcoin.usd + " $"
         document.getElementById("gmt-value").textContent = data["gmt-token"].usd + " $"
+        document.getElementById("btc-price").value = data.bitcoin.usd
+        document.getElementById("gmt-price").value = data["gmt-token"].usd
     } catch (error) {
         console.error("erreur lors de la récupération des prix :", error)
     }
 }
+
+document.querySelectorAll("input-decimal").forEach((input) => {
+    input.addEventListener("input", (e) => {
+        const value = e.target.value.replace(',', '.');
+
+        const numberValue = parseFloat(value);
+        if(!isNaN(numberValue)) {
+          alert("Valeur incorrecte !\n Veuillez entrer un nombre valide.");
+        }
+      })       
+})
+
+document.querySelectorAll('button, span, seleclt, a').forEach((el => {
+    el.addEventListener('click', () => el.blur())
+}))
 
 getCryptoPrices()
 

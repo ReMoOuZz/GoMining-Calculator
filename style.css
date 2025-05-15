@@ -2,11 +2,12 @@ html, body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    height: 92%;
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
 }
+
 
 /* ======================================================================================================= */
 /* Header */
@@ -137,6 +138,7 @@ select:focus {
 
   .content-container {
     background-color: #b3b3b5;
+    height: auto;
     display: flex;
     justify-content: space-between;
     padding-bottom: 40px;
@@ -148,12 +150,15 @@ select:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: auto;
+    max-height: 550px;
+    flex-shrink: 0;
     max-width: 300px;
     margin-top: 30px;
     background-color: #34343a;
     color: white;
     border-radius: 10px;
-    border: 10px solid #7540ef ;
+    border: 7px solid #7540ef ;
 }
 
 .calculator-container {
@@ -169,6 +174,11 @@ select:focus {
     align-items: center;
     max-width: 250px;
   }
+
+  .calculator-options input {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+  }    
   
 .calculator-options input {
     width: 100px;
@@ -194,7 +204,6 @@ p {
     display: flex;
     flex-direction: column;
     width: 90%;
-    display: flex;
     justify-content: flex-start;
     margin-bottom: 15px;
     font-size: 12px;
