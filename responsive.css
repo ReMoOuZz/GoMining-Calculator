@@ -62,22 +62,6 @@
     } 
 }
 
-@media (max-width : 1920px) and (min-width : 1024px) {
-    .content-container{
-        max-height: 100vh;
-        height: 80%;
-    
-    }
-    .container {
-        height: 20vh;
-    }
-    .calculator {
-    height: auto;
-    flex-shrink: 0;
-    max-height: fit-content;
-    max-height: 80%;
-    }
-}
 
 @media (max-width: 3440px) and (min-width: 1920px) {
     
