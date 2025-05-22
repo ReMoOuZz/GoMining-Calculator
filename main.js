@@ -7,25 +7,42 @@ async function getCryptoPrices() {
 
         document.getElementById("btc-value").textContent = data.bitcoin.usd + " $"
         document.getElementById("gmt-value").textContent = data["gmt-token"].usd + " $"
-        document.getElementById("btc-price").value = data.bitcoin.usd
-        document.getElementById("gmt-price").value = data["gmt-token"].usd
+        document.getElementById("btc-price").value = Number(data.bitcoin.usd)
+        document.getElementById("gmt-price").value = Number(data["gmt-token"].usd)
     } catch (error) {
         console.error("erreur lors de la récupération des prix :", error)
     }
 }
+const select = document.getElementById("page-select")
+if (select) {
+  const currentPage = window.location.pathname.split("/").pop()
+  Array.from(select.options).forEach(option => {
+    if (option.value === currentPage) {
+      option.selected = true
+      console.log("Page courante :", currentPage);
+      
+    }
+  })
+}
+document.getElementById("page-select").addEventListener("change", function() {
+  if (this.value) {
+    window.location.href = this.value;
+  }
+  
+})
 
-document.querySelectorAll("input-decimal").forEach((input) => {
+document.querySelectorAll(".input-decimal").forEach((input) => {
     input.addEventListener("input", (e) => {
         const value = e.target.value.replace(',', '.');
 
         const numberValue = parseFloat(value);
-        if(!isNaN(numberValue)) {
+        if(isNaN(numberValue)) {
           alert("Valeur incorrecte !\n Veuillez entrer un nombre valide.");
         }
       })       
 })
 
-document.querySelectorAll('button, span, seleclt, a').forEach((el => {
+document.querySelectorAll('button, span, select, a').forEach((el => {
     el.addEventListener('click', () => el.blur())
 }))
 
@@ -88,9 +105,9 @@ const isGmtMode = toggle.checked
 gmtConsommation.forEach(el => {
     el.style.display = isGmtMode ? "inline" : "none"
 })
- {
+ 
     btcConsommation.style.display = isGmtMode ? "none" : ""
- }
+ 
 })
 
 const baseValues = {
@@ -110,13 +127,12 @@ const baseValues = {
   }
   
   function recalculateRewards() {
-
+ 
     const btcPrice = parseFloat(document.getElementById("btc-price").value) 
     const gmtPrice = parseFloat(document.getElementById("gmt-price").value) 
     const thPower = parseFloat(document.getElementById("th-power").value) 
     const efficiency = parseFloat(document.getElementById("efficiency").value) 
     const discount = parseFloat(document.getElementById("discount").value) 
-    const discountGmt = parseFloat(document.getElementById("discount-percentage-gmt").value) 
     const tauxBtc = 53
 
  if (
@@ -152,6 +168,7 @@ const baseValues = {
       ? (electricityConsomationFinalGmt + serviceFinalGmt) * (gmtPrice / btcPrice)
       : electricityConsomationFinal + serviceFinal
   
+
     const totalReward = btcBrutRewards - totalFees
     const totalRewardDollar = totalReward * btcPrice
   
