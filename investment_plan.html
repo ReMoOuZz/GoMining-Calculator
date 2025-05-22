@@ -24,6 +24,10 @@
             <h6 class="coin-title GMT">GoMining</h6>
             <p class="price" id="gmt-value">Chargement</p>
           </div>
+          <div class="th-content">
+            <h6 class="coin-title TH">Prix TH</h6>
+            <p class="price" id="th-value">Chargement</p>
+          </div>
         </div>
         <div class="center-content">
           <h1>GoMining Calculator</h1>
@@ -34,7 +38,7 @@
             <label for="page-select"></label>
             <select id="page-select">
               <option value="index.html">Calculateur</option>
-              <option value="ROI_calculator.html">ROI</option>
+              <option value="investment_plan.html">Plan</option>
             </select>
           </div>
         </div>
@@ -51,12 +55,16 @@
             <input type="text" class="input-decimal" name="BTC-price" id="btc-price" placeholder="Ex : 95000" value="btc-price-input" />
             <label for="Prix du GMT">Prix du GMT :</label>
             <input type="text" class="input-decimal" name="GMT-price" id="gmt-price" placeholder="Ex : 0.42" value="gmt-price-input" />
-            <label for="TH power">Puissance en TH :</label>
+            <label for="TH power">Puissance de base :</label>
             <input type="text" class="input-decimal" name="TH-power " id="th-power" placeholder="Ex : 100" />
             <label for="efficiency">Consommation électrique :</label>
             <input type="text" class="input-decimal" name="efficiency" id="efficiency" placeholder="Ex : 20" />
             <label for="discount">Pourcentage de remise :</label>
             <input type="text" class="input-decimal" name="discount" id="discount" placeholder="Ex : 14" />
+            <label for="investment">Investissement Mensuel :</label>
+            <input type="text" class="input-decimal" name="investment" id="investment" placeholder="Ex : 50" />
+            <label for="duration">Durée (en mois) :</label>
+            <input type="text" class="input-decimal" name="duration" id="duration" placeholder="Ex : 120" />
           </div>
         </div>
         <p>Choix de l'entretien</p>
@@ -68,13 +76,7 @@
           </label>
           <span class="label">GMT</span>
         </div>
-        <label for="period"></label>
-        <select id="period">
-          <option value="daily">Quotidien</option>
-          <option value="monthly">Mensuel</option>
-          <option value="yearly">Annuel</option>
-        </select>
-        <h4 class="cost-btc-title">Résultats</h4>
+        <h4 class="cost-btc-title" style="margin-top: 0">Résultats</h4>
         <div class="result-container">
           <div class="result">
             <p><strong>Revenu :</strong> <span id="income">0</span> <img src="./images/btc_icon.png" alt="BTC icon" width="15px" /></p>
@@ -96,15 +98,7 @@
         <h4 class="gmt-consommation" id="gmt-consommation-title">Coût en GMT</h4>
         <div class="gmt-consommation" id="gmt-consommation-block">
           <p>
-            <strong>Dépense quotidienne :</strong> <span id="daily-charging-cost">0</span>
-            <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
-          </p>
-          <p>
-            <strong>Dépense mensuelle :</strong> <span id="monthly">0</span>
-            <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
-          </p>
-          <p>
-            <strong>Dépense annuelle :</strong> <span id="yearly">0</span>
+            <strong>Dépense totale :</strong> <span id="daily-charging-cost">0</span>
             <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
           </p>
         </div>
@@ -212,5 +206,6 @@
       </div>
     </footer>
     <script src="./main.js"></script>
+    <script src="./investment_plan.js"></script>
   </body>
 </html>
