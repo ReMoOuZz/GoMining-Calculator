@@ -23,10 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const select = document.getElementById("page-select");
   if (select) {
     const currentPage = window.location.pathname.split("/").pop();
-
-    if (select.value !== currentPage) {
-      select.value = currentPage;
-    }
+    select.value = currentPage;
 
     select.addEventListener("change", function () {
       if (this.value) {
