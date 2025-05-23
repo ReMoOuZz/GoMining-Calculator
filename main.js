@@ -23,19 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const select = document.getElementById("page-select");
   if (select) {
     const currentPage = window.location.pathname.split("/").pop();
-    Array.from(select.options).forEach(option => {
-      if (option.value === currentPage) {
-        option.selected = true;
-      }
-    });
+
+    if (select.value !== currentPage) {
+      select.value = currentPage;
+    }
 
     select.addEventListener("change", function () {
       if (this.value) {
-        window.location.href = this.value;
+        setTimeout(() => {
+          window.location.assign(this.value);
+        }, 100);
       }
     });
   }
 });
+
 
 
 // ======================================================================================================================
