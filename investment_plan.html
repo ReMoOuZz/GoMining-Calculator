@@ -55,14 +55,14 @@
             <input type="text" class="input-decimal" name="BTC-price" id="btc-price" placeholder="Ex : 95000" value="btc-price-input" />
             <label for="Prix du GMT">Prix du GMT :</label>
             <input type="text" class="input-decimal" name="GMT-price" id="gmt-price" placeholder="Ex : 0.42" value="gmt-price-input" />
-            <label for="TH power">Puissance de base :</label>
+            <label for="TH power">Puissance :</label>
             <input type="text" class="input-decimal" name="TH-power " id="th-power" placeholder="Ex : 100" />
             <label for="efficiency">Consommation électrique :</label>
             <input type="text" class="input-decimal" name="efficiency" id="efficiency" placeholder="Ex : 20" />
             <label for="discount">Pourcentage de remise :</label>
             <input type="text" class="input-decimal" name="discount" id="discount" placeholder="Ex : 14" />
-            <label for="investment">Investissement Mensuel :</label>
-            <input type="text" class="input-decimal" name="investment" id="investment" placeholder="Ex : 50" />
+            <label for="investment">Investissement mensuel (en TH) :</label>
+            <input type="text" class="input-decimal" name="investment" id="investment" placeholder="Ex : 2" />
             <label for="duration">Durée (en mois) :</label>
             <input type="text" class="input-decimal" name="duration" id="duration" placeholder="Ex : 120" />
           </div>
@@ -93,14 +93,15 @@
               <strong>Net en dollars :</strong> <span id="profit-dollar">0</span>
               <img src="./images/dollar-icon.png" alt="Dollar icon" width="17px" />
             </p>
+            <p>
+              <strong>Dépense achat nouveaux TH :</strong> <span id="th-cost-total">0</span>
+              <img src="./images/dollar-icon.png" alt="Dollar icon" width="17px" />
+            </p>
+            <p>
+              <strong>Nouvelle puissance :</strong> <span id="power-upgraded">0</span>
+              <img src="./images/TH_icon.png" alt="TH icon" width="15px" />
+            </p>
           </div>
-        </div>
-        <h4 class="gmt-consommation" id="gmt-consommation-title">Coût en GMT</h4>
-        <div class="gmt-consommation" id="gmt-consommation-block">
-          <p>
-            <strong>Dépense totale :</strong> <span id="daily-charging-cost">0</span>
-            <img src="./images/gmt-con.png" alt="GMT icon icon" width="15px" />
-          </p>
         </div>
       </div>
       <div class="btc-right-content">
