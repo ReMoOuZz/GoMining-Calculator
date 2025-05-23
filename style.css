@@ -29,7 +29,8 @@ html, body {
 }
 
 .btc-content,
-.gmt-content {
+.gmt-content,
+ .th-content{
     line-height: 5px;
 }
 
@@ -53,6 +54,11 @@ html, body {
 .GMT {
     background-color: #7540ef;
     border: 3px solid  #7540ef;
+}
+
+.TH {
+    background-color: #4639bd;
+    border: 3px solid #4639bd;
 }
 
 .center-content {
@@ -127,12 +133,6 @@ select:focus {
     box-shadow: none;
 }
 
-.fa-earth-europe {
-    color: #2b7a78;
-    font-size: 1.2rem;
-    margin-right: 5px;
-  }
-
   /* ===================================================================================================== */
 /* Calculator-content */
 
@@ -197,6 +197,7 @@ p {
     margin-bottom: 15px;
     font-size: 12px;
     font-weight: 200;
+    line-height: 20px;
     
 }
 
