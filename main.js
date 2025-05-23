@@ -19,22 +19,24 @@ async function getCryptoPrices() {
 
 // ======================================================================================================================
 
-const select = document.getElementById("page-select")
-if (select) {
-  const currentPage = window.location.pathname.split("/").pop()
-  Array.from(select.options).forEach(option => {
-    if (option.value === currentPage) {
-      option.selected = true
-      
-    }
-  })
-}
-document.getElementById("page-select").addEventListener("change", function() {
-  if (this.value) {
-    window.location.href = this.value;
+document.addEventListener("DOMContentLoaded", function () {
+  const select = document.getElementById("page-select");
+  if (select) {
+    const currentPage = window.location.pathname.split("/").pop();
+    Array.from(select.options).forEach(option => {
+      if (option.value === currentPage) {
+        option.selected = true;
+      }
+    });
+
+    select.addEventListener("change", function () {
+      if (this.value) {
+        window.location.href = this.value;
+      }
+    });
   }
-  
-})
+});
+
 
 // ======================================================================================================================
 
