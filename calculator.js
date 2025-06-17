@@ -21,7 +21,7 @@ const baseValues = {
     const thPower = parseFloat(document.getElementById("th-power").value) 
     const efficiency = parseFloat(document.getElementById("efficiency").value) 
     const discount = parseFloat(document.getElementById("discount").value) 
-    const tauxBtc = 52
+    const tauxBtc = 50
 
  if (
         isNaN(btcPrice) || btcPrice === 0 ||
