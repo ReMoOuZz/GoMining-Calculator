@@ -238,6 +238,7 @@
         max-width: none;
         margin: 0;
         padding: 0 80px;
+        min-height: 100vh;
     }
     
     .promo {
@@ -255,6 +256,8 @@
     .calculator {
         flex: 1;
         max-width: 500px;
+        min-height: fit-content;
+        height: auto;
     }
     
     .btc-icon {
