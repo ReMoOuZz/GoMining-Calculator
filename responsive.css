@@ -14,8 +14,9 @@
     }
     
     .calculator {
-        max-width: 280px;
-        margin: 15px 10px;
+        width: 80%;
+        max-width: 320px;
+        margin: 15px auto;
     }
     
     .calculator-options {
@@ -44,16 +45,96 @@
     .promo {
         flex-direction: column;
         gap: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 15px;
     }
     
     .left-promo-content,
     .center-promo-content,
     .right-promo-content {
-        margin: 10px;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .right-promo-content {
+        gap: 15px;
+    }
+    
+    .copy-container {
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+        max-width: 280px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .fake-input {
+        width: 120px;
+        margin-right: 5px;
+        margin-bottom: 0;
+        font-size: 10px;
+        padding: 6px;
+    }
+    
+    .copy-button {
+        width: auto;
+        padding: 6px 8px;
+    }
+    
+    #bncAdress,
+    #solAdress {
+        font-size: 12px;
+        margin-right: 5px;
+        margin-bottom: 0;
+        padding: 6px 8px;
+    }
+    
+    select {
+        z-index: 50;
+        position: relative;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        touch-action: manipulation;
+        min-height: 44px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    select:focus {
+        z-index: 60;
+    }
+    
+    select:active {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .calculator select {
+        z-index: 1000;
+        position: relative;
+    }
+    
+    .calculator select:focus {
+        z-index: 1001;
+    }
+    
+    .calculator select:active {
+        z-index: 1002;
     }
     
     #promo-image {
         width: 250px;
+        margin: 0 auto;
     }
 }
 
@@ -104,6 +185,9 @@
     .promo {
         flex-wrap: wrap;
         gap: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .left-promo-content,
@@ -111,7 +195,80 @@
     .right-promo-content {
         flex: 1 1 100%;
         text-align: center;
-        margin: 10px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .right-promo-content {
+        gap: 20px;
+    }
+    
+    .copy-container {
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        max-width: 320px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .fake-input {
+        width: 140px;
+        margin-right: 8px;
+        margin-bottom: 0;
+        font-size: 11px;
+        padding: 8px;
+    }
+    
+    .copy-button {
+        width: auto;
+        padding: 8px 10px;
+    }
+    
+    #bncAdress,
+    #solAdress {
+        font-size: 14px;
+        margin-right: 8px;
+        margin-bottom: 0;
+        padding: 8px 10px;
+    }
+    
+    select {
+        z-index: 50;
+        position: relative;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        touch-action: manipulation;
+        min-height: 44px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    select:focus {
+        z-index: 60;
+    }
+    
+    select:active {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .calculator select {
+        z-index: 1000;
+        position: relative;
+    }
+    
+    .calculator select:focus {
+        z-index: 1001;
+    }
+    
+    .calculator select:active {
+        z-index: 1002;
     }
     
     .content-container {
@@ -126,7 +283,8 @@
     }
     
     .calculator {
-        max-width: 90%;
+        width: 80%;
+        max-width: 350px;
         margin: 20px auto;
     }
 }
