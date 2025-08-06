@@ -12,7 +12,7 @@
   --dark-gray: #6c757d;
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.2);
-  
+
   --font-family: "Inter", sans-serif;
   --font-size-small: 10px;
   --font-size-base: 12px;
@@ -21,22 +21,22 @@
   --font-size-xl: 25px;
   --font-size-xxl: 30px;
   --font-size-huge: 50px;
-  
+
   --spacing-xs: 5px;
   --spacing-sm: 10px;
   --spacing-md: 15px;
   --spacing-lg: 20px;
   --spacing-xl: 30px;
-  
+
   --border-radius-sm: 8px;
   --border-radius-md: 12px;
   --border-radius-lg: 16px;
   --border-radius-xl: 24px;
-  
+
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
   --shadow-heavy: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -275,13 +275,13 @@ select {
     user-select: none;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-}
+} */
 
-select:hover {
+ select:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-1px);
     box-shadow: var(--shadow-medium);
-}
+} */
 
 select:focus {
     outline: none;
@@ -289,40 +289,13 @@ select:focus {
     transform: translateY(-1px);
     z-index: 20;
     background: rgba(255, 255, 255, 0.15);
-}
+} */
 
 select:active {
     background: rgba(255, 255, 255, 0.2);
     z-index: 30;
 }
 
-@media (max-width: 768px) {
-    select {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        user-select: none;
-        min-height: 44px;
-        touch-action: manipulation;
-        z-index: 1000;
-        position: relative;
-    }
-    
-    select:focus {
-        z-index: 1001;
-    }
-    
-    select:active {
-        z-index: 1002;
-    }
-    
-    .calculator {
-        z-index: 1;
-    }
-    
-    .calculator select {
-        z-index: 1000;
-    }
-}
 
 select option {
     background: rgba(0, 0, 0, 0.9);
@@ -389,7 +362,6 @@ select option:focus {
     padding: var(--spacing-lg);
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     color: var(--white);
     border-radius: var(--border-radius-lg);
     border: 2px solid var(--glass-border);
@@ -420,6 +392,7 @@ select option:focus {
 
 .calculator-container {
    display: flex;
+   justify-content: center;
    width: 100%;
    padding: 0;
    margin-bottom: var(--spacing-lg);
@@ -430,8 +403,8 @@ select option:focus {
 .calculator-options {
     font-size: 10px;
     display: grid;
-    grid-template-columns: 1fr 2fr; 
-    gap: var(--spacing-sm) var(--spacing-lg);
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-sm) var(--spacing-xl);
     align-items: center;
     width: 100%;
     max-width: 280px;
@@ -569,7 +542,7 @@ p {
 #gmt-consommation-title {
     text-align: center;
     font-size: var(--font-size-medium);
-    font-weight: 600; 
+    font-weight: 600;
     margin: var(--spacing-md) 0 var(--spacing-sm) 0;
     color: var(--primary-color);
     text-shadow: 0 0 8px rgba(117, 64, 239, 0.3);
@@ -631,9 +604,9 @@ p {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0; 
-    left: 0; 
-    right: 0; 
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
     background: linear-gradient(135deg, var(--accent-color), #ff8c00);
     transition: var(--transition-slow);
@@ -977,7 +950,7 @@ input:checked + .slider:hover {
     pointer-events: none;
 }
 
-.container4 { 
+.container4 {
     font-size: var(--font-size-large);
     max-width: 100em;
     margin-bottom: var(--spacing-sm);
@@ -1180,7 +1153,7 @@ footer {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    
+
     .container4 > :first-child {
         animation: none;
     }

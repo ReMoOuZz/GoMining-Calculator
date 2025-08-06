@@ -50,8 +50,9 @@ document.querySelectorAll(".input-decimal").forEach((input) => {
 
 // ======================================================================================================================
 
-document.querySelectorAll("button, span, select, a").forEach((el) => {
+document.querySelectorAll("button, span, a").forEach((el) => {
   el.addEventListener("click", () => el.blur());
+  console.log(el)
 });
 
 // ======================================================================================================================
@@ -145,19 +146,19 @@ let x = setInterval(function () {
         <span class='value'>${years}</span>
         <span class='label'>Années</span>
         </div>
-    <div class= 'tag'> 
+    <div class= 'tag'>
         <span class= 'value'>${days}</span>
         <span class='label'>Jours</span>
         </div>
-    <div class= 'tag'> 
+    <div class= 'tag'>
         <span class= 'value'>${hours}</span>
         <span class='label'>Heures</span>
         </div>
-    <div class= 'tag'> 
+    <div class= 'tag'>
         <span class= 'value'>${minutes}</span>
         <span class='label'>minutes</span>
         </div>
-    <div class= 'tag'> 
+    <div class= 'tag'>
         <span class= 'value'>${seconds}</span>
         <span class='label'>secondes</span>
         </div>
