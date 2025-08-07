@@ -52,7 +52,6 @@ document.querySelectorAll(".input-decimal").forEach((input) => {
 
 document.querySelectorAll("button, span, a").forEach((el) => {
   el.addEventListener("click", () => el.blur());
-  console.log(el)
 });
 
 // ======================================================================================================================

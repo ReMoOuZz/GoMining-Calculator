@@ -83,8 +83,8 @@ function recalculateRewards() {
   updateBaseValues();
 }
 
-document.querySelectorAll("input").forEach((input) => {
-  input.addEventListener("change", recalculateRewards);
-});
+// document.querySelectorAll("input").forEach((input) => {
+//   input.addEventListener("change", recalculateRewards);
+// });
 
 document.getElementById("period").addEventListener("change", recalculateRewards);

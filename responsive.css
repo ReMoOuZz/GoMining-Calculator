@@ -345,7 +345,6 @@
         width: 100%;
         max-width: none;
         margin: 0;
-        padding: 0 40px;
     }
 
     .container4 {
@@ -386,7 +385,6 @@
         width: 100%;
         max-width: none;
         margin: 0;
-        padding: 0 60px;
     }
 
     .calculator {
@@ -423,7 +421,6 @@
         width: 100%;
         max-width: none;
         margin: 0;
-        padding: 0 80px;
         min-height: 100vh;
     }
 
