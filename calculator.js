@@ -20,7 +20,7 @@ function recalculateRewards() {
   const thPower = parseFloat(document.getElementById("th-power").value);
   const efficiency = parseFloat(document.getElementById("efficiency").value);
   const discount = parseFloat(document.getElementById("discount").value);
-  const tauxBtc = 54;
+  const tauxBtc = 50;
 
   if (
     isNaN(btcPrice) ||
@@ -83,8 +83,8 @@ function recalculateRewards() {
   updateBaseValues();
 }
 
-document.querySelectorAll("input").forEach((input) => {
-  input.addEventListener("change", recalculateRewards);
-});
+// document.querySelectorAll("input").forEach((input) => {
+//   input.addEventListener("change", recalculateRewards);
+// });
 
 document.getElementById("period").addEventListener("change", recalculateRewards);

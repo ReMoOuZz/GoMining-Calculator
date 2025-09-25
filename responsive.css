@@ -1,7 +1,8 @@
 @media (max-width: 695px) {
-   .tag {
+    .tag {
         margin: 3px;
         padding: 3px;
+        width: 40px;
     }
 
     .value {
@@ -11,17 +12,168 @@
     .label {
         font-size: 8px;
     }
+
+    .calculator {
+        width: 80%;
+        max-width: 320px;
+        margin: 15px auto;
+    }
+
+    .calculator-options {
+        gap: 8px 15px;
+        font-size: 8px;
+    }
+
+    .calculator-options input {
+        width: 80px;
+        font-size: 11px;
+    }
+
+    .left-content {
+        gap: 15px;
+        margin: 5px 10px;
+    }
+
+    .center-content {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .promo {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .left-promo-content,
+    .center-promo-content,
+    .right-promo-content {
+        margin: 10px auto;
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-promo-content {
+        gap: 15px;
+    }
+
+    .copy-container {
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+        max-width: 280px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fake-input {
+        width: 120px;
+        margin-right: 5px;
+        margin-bottom: 0;
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    .copy-button {
+        width: auto;
+        padding: 6px 8px;
+    }
+
+    #bncAdress,
+    #solAdress {
+        font-size: 12px;
+        margin-right: 5px;
+        margin-bottom: 0;
+        padding: 6px 8px;
+    }
+
+    select {
+        z-index: 50;
+        position: relative;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        touch-action: manipulation;
+        min-height: 44px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    select:focus {
+        z-index: 60;
+    }
+
+    select:active {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .calculator select {
+        z-index: 1000;
+        position: relative;
+    }
+
+    .calculator select:focus {
+        z-index: 1001;
+    }
+
+    .calculator select:active {
+        z-index: 1002;
+    }
+
+    #promo-image {
+        width: 250px;
+        margin: 0 auto;
+    }
 }
 
+@media (max-width: 768px) {
+  select {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+      min-height: 44px;
+      touch-action: manipulation;
+      z-index: 1000;
+      position: relative;
+  }
 
-@media (max-width: 1024px) {
+  select:focus {
+      z-index: 1001;
+  }
 
+  select:active {
+      z-index: 1002;
+  }
+
+  .calculator {
+      z-index: 1;
+  }
+
+  .calculator select {
+      z-index: 1000;
+  }
+}
+
+@media (min-width: 696px) and (max-width: 1024px) {
     #responsive-image {
         display: none;
     }
 
     .promo {
         flex-wrap: wrap;
+        gap: 20px;
     }
 
     .left-content,
@@ -29,18 +181,25 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .right-promo-content {
         margin-bottom: 5%;
     }
 
+    .calculator {
+        max-width: 320px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-
-@media (max-width : 1024px) and (min-width : 320px) {
-
+@media (max-width: 1024px) {
     .container {
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     .left-content,
@@ -48,10 +207,15 @@
     .right-content {
         flex: 1 1 100%;
         text-align: center;
+        justify-content: center;
     }
 
     .promo {
         flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .left-promo-content,
@@ -59,23 +223,290 @@
     .right-promo-content {
         flex: 1 1 100%;
         text-align: center;
-    } 
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-promo-content {
+        gap: 20px;
+    }
+
+    .copy-container {
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        max-width: 320px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .fake-input {
+        width: 140px;
+        margin-right: 8px;
+        margin-bottom: 0;
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .copy-button {
+        width: auto;
+        padding: 8px 10px;
+    }
+
+    #bncAdress,
+    #solAdress {
+        font-size: 14px;
+        margin-right: 8px;
+        margin-bottom: 0;
+        padding: 8px 10px;
+    }
+
+    select {
+        z-index: 50;
+        position: relative;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        touch-action: manipulation;
+        min-height: 44px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    select:focus {
+        z-index: 60;
+    } */
+
+     select:active {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .calculator select {
+        z-index: 1000;
+        position: relative;
+    }
+
+    .calculator select:focus {
+        z-index: 1001;
+    }
+
+    .calculator select:active {
+        z-index: 1002;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .gmt-left-content,
+    .btc-right-content {
+        display: none;
+    }
+
+    .calculator {
+        width: 80%;
+        max-width: 350px;
+        margin: 20px auto;
+    }
 }
 
-
-@media (max-width: 3440px) and (min-width: 1920px) {
-    
-    .content-container{
-        height: 72%;
+@media (min-width: 1025px) {
+    .container {
+        flex-wrap: nowrap;
     }
+
+    .left-content,
+    .center-content,
+    .right-content {
+        flex: 1;
+    }
+
+    .promo {
+        flex-wrap: nowrap;
+    }
+
+    .left-promo-content,
+    .center-promo-content,
+    .right-promo-content {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1920px) {
+    .content-container {
+        height: 72%;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
     .container4 {
         max-width: 100%;
     }
+
     .btc-icon {
         width: 350px;
     }
+
     .gmt-icon {
-       width: 300px; 
+        width: 300px;
     }
-   
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .center-content {
+        font-size: 35px;
+    }
+
+    .calculator {
+        max-width: 400px;
+        max-height: 600px;
+    }
+
+    .promo {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .content-container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .calculator {
+        max-width: 450px;
+    }
+
+    .promo {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0 60px;
+    }
+
+    .gmt-left-content,
+    .btc-right-content {
+        flex: 3;
+    }
+
+    .calculator {
+        flex: 1;
+    }
+
+    .btc-icon {
+        width: 400px;
+    }
+
+    .gmt-icon {
+        width: 350px;
+    }
+}
+
+@media (min-width: 1920px) and (min-aspect-ratio: 21/9) {
+    .content-container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        min-height: 100vh;
+    }
+
+    .promo {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0 80px;
+    }
+
+    .gmt-left-content,
+    .btc-right-content {
+        flex: 4;
+    }
+
+    .calculator {
+        flex: 1;
+        max-width: 500px;
+        min-height: fit-content;
+        height: auto;
+    }
+
+    .btc-icon {
+        width: 450px;
+    }
+
+    .gmt-icon {
+        width: 400px;
+    }
+}
+
+@media print {
+    .promo,
+    .countdown-container,
+    .right-content {
+        display: none !important;
+    }
+
+    .calculator {
+        border: 2px solid #000;
+        background: white !important;
+        color: black !important;
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    h1 {
+        font-size: 24pt;
+    }
+
+    h4 {
+        font-size: 14pt;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .icon-copy {
+        background-size: 20px 20px;
+    }
+
+    img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+    .calculator {
+        max-height: 400px;
+        margin-top: 10px;
+    }
+
+    .countdown-container {
+        padding-bottom: 15px;
+    }
+
+    .tag {
+        padding: 15px;
+    }
+
+    .value {
+        font-size: 20px;
+    }
 }
