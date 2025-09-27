@@ -9,7 +9,7 @@ This project provides a simple yet powerful tool to calculate mining rewards and
 - **Rewards Calculator** (index.html) - Calculate daily, monthly, or yearly mining rewards
 - **Investment Plan** (investment_plan.html) - Simulate long-term investment strategies
 
-🌐 **Live Demo**: [https://remoouzz.github.io/GoMining-Calculator/](https://remoouzz.github.io/GoMining-Calculator/)
+🌐 **Live**: [https://gomining-calculator.app/](https://gomining-calculator.app/)
 
 ## Features
 
@@ -35,7 +35,8 @@ This project provides a simple yet powerful tool to calculate mining rewards and
 
 ## Screenshot
 
-![Screenshot of the Homepage](./images/presentation.png)
+| ![Image 1](./images/screenshot.png) | ![Image 2](./images/mockup.png) |
+|-------------------------|-------------------------|
 
 ## Project Structure
 
@@ -65,9 +66,6 @@ GoMining-Calculator/
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - Internet connection (for real-time price data)
 
-### Quick Start
-
-🌐 **Try it online**: Visit [https://remoouzz.github.io/GoMining-Calculator/](https://remoouzz.github.io/GoMining-Calculator/) to use the calculator immediately.
 
 ### Installation
 
